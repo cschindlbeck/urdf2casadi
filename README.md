@@ -37,6 +37,25 @@ forward_kinematics = fk_dict["T_fk"]
 print(forward_kinematics([0.3, 0.3, 0.3, 0., 0.3, 0.7]))
 ```
 
+## Docker
+
+You can use [Docker](https://www.docker.com) with docker compose to run the example ur5_example.py.
+
+First, build your docker image via
+
+```bash
+cd .docker
+docker compose build
+```
+
+Then, you can run the example from examples/user/ur5_example.py via
+
+```bash
+docker compose run urdf2casadi
+```
+
+This prints the result of the example to the console.
+
 ## Citation
 The results were published in "Robot Dynamics with URDF & CasADi" at ICCMA 2019. [[Preprint](http://folk.ntnu.no/tomgra/papers/Johannessen_ICCMA_2019_paper_23%20.pdf)]
 ```

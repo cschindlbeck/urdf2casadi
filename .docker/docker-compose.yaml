@@ -1,0 +1,12 @@
+---
+services:
+  urdf2casadi:
+    build:
+      context: ..
+      dockerfile: .docker/Dockerfile
+    # entrypoint: ["bash"]  # uncomment this to start into console
+    # entrypoint: ["python", "examples/user/ur5_example.py"]  # specify a custom file to run
+    image: urdf2casadi
+    volumes:
+      - ../urdf2casadi:/project/urdf2casadi
+      - ../examples:/project/examples
